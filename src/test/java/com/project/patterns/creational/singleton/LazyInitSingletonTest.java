@@ -15,6 +15,9 @@ import static org.junit.jupiter.api.Assertions.assertSame;
  */
 public class LazyInitSingletonTest {
 
+    /**
+     * 1. 測試是否只有一個實體
+     */
     @Test
     void testOnlyOneInstance() {
         LazyInitSingleton s1 = LazyInitSingleton.getInstance();
@@ -22,6 +25,9 @@ public class LazyInitSingletonTest {
         assertSame(s1, s2, "是同一個實體");
     }
 
+    /**
+     * 2. 測試屬性是否共用
+     */
     @Test
     void testSharedFieldValues() {
         LazyInitSingleton s1 = LazyInitSingleton.getInstance();
